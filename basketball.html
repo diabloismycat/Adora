@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adora | Basketball Stats</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0f0f0f] text-white font-sans min-h-screen">
+    <nav class="p-6">
+        <a href="index.html" class="text-gray-500 hover:text-orange-500 transition-all">← EXIT COURT</a>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-10">
+        <div class="flex flex-col md:flex-row items-end gap-6 mb-12 border-b-8 border-orange-500 pb-8">
+            <h1 class="text-8xl font-black italic tracking-tighter uppercase italic leading-none">Adora<br><span class="text-orange-500">#24</span></h1>
+            <div class="flex-1 text-right">
+                <p class="text-orange-500 font-bold tracking-widest uppercase text-sm">Position: Point Guard</p>
+                <p class="text-4xl font-black tracking-tighter uppercase">Season Stats 2026</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div class="bg-stone-900 p-6 rounded-sm border-l-4 border-orange-500">
+                <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">PPG</p>
+                <p class="text-5xl font-black italic">18.5</p>
+            </div>
+            <div class="bg-stone-900 p-6 rounded-sm border-l-4 border-orange-500">
+                <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">APG</p>
+                <p class="text-5xl font-black italic">6.2</p>
+            </div>
+            <div class="bg-stone-900 p-6 rounded-sm border-l-4 border-orange-500">
+                <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">3P%</p>
+                <p class="text-5xl font-black italic">42.5</p>
+            </div>
+            <div class="bg-stone-900 p-6 rounded-sm border-l-4 border-orange-500">
+                <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">Win Rate</p>
+                <p class="text-5xl font-black italic text-orange-500">75%</p>
+            </div>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="border-b border-gray-800 text-gray-500 text-xs uppercase tracking-widest">
+                        <th class="py-4 px-2">Opponent</th>
+                        <th class="py-4 px-2">Result</th>
+                        <th class="py-4 px-2 text-center">PTS</th>
+                        <th class="py-4 px-2 text-center">AST</th>
+                        <th class="py-4 px-2 text-center">REB</th>
+                    </tr>
+                </thead>
+                <tbody class="font-bold text-sm">
+                    <tr class="border-b border-gray-900 hover:bg-stone-900 transition-colors">
+                        <td class="py-6 px-2">Vs. West Side Tigers</td>
+                        <td class="py-6 px-2 text-green-500">W 88-72</td>
+                        <td class="py-6 px-2 text-center">24</td>
+                        <td class="py-6 px-2 text-center">8</td>
+                        <td class="py-6 px-2 text-center">4</td>
+                    </tr>
+                    <tr class="border-b border-gray-900 hover:bg-stone-900 transition-colors">
+                        <td class="py-6 px-2">Vs. Tech Valley Bulls</td>
+                        <td class="py-6 px-2 text-red-500">L 65-70</td>
+                        <td class="py-6 px-2 text-center">12</td>
+                        <td class="py-6 px-2 text-center">5</td>
+                        <td class="py-6 px-2 text-center">2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
