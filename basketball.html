@@ -1,102 +1,65 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adora | Basketball Profile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#FDFBF7] text-stone-800 font-sans min-h-screen">
-
-    <nav class="p-6 max-w-5xl mx-auto flex justify-between items-center">
-        <a href="index.html" class="text-stone-400 hover:text-stone-800 transition-all font-bold tracking-widest text-sm">← EXIT COURT</a>
-        <div class="text-4xl font-black italic text-stone-200">#8</div>
-    </nav>
-
-    <main class="max-w-5xl mx-auto px-6 py-4">
-        <div class="flex flex-col md:flex-row items-center gap-8 mb-12 border-b-4 border-stone-800 pb-10">
-            <div class="flex-1 order-2 md:order-1">
-                <span class="bg-orange-500 text-white px-3 py-1 text-xs font-black uppercase italic rounded-full">Active Player</span>
-                <h1 class="text-7xl font-black italic tracking-tighter uppercase leading-none mt-4 text-stone-900">
-                    Adora <span class="text-orange-500">#8</span>
-                </h1>
-                <p class="mt-4 text-stone-500 font-medium max-w-md">leading the team, control the game.</p>
-            </div>
-            
-            <div class="w-48 h-48 md:w-64 md:h-64 bg-stone-200 rounded-2xl overflow-hidden shadow-2xl border-4 border-white rotate-2 order-1 md:order-2">
-                <img src="me.jpg" alt="Adora" class="w-full h-full object-cover">
+<div class="nba-dashboard">
+    <div class="player-card-header">
+        <div class="player-identity">
+            <div class="jersey-num">08</div>
+            <div class="player-meta">
+                <h1 class="player-name">ADORA WU</h1>
+                <p class="team-name">WLSA WOMEN'S BASKETBALL</p>
             </div>
         </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            <div class="space-y-6">
-                <h2 class="text-xl font-black uppercase italic border-l-4 border-orange-500 pl-3">Bio-Metrics</h2>
-                <div class="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
-                    <table class="w-full text-sm">
-                        <tbody>
-                            <tr class="border-b border-stone-100">
-                                <td class="p-4 text-stone-400 uppercase font-bold text-xs">Team</td>
-                                <td class="p-4 text-right font-black italic">Adora Elite</td>
-                            </tr>
-                            <tr class="border-b border-stone-100">
-                                <td class="p-4 text-stone-400 uppercase font-bold text-xs">Height</td>
-                                <td class="p-4 text-right font-bold">178 CM</td>
-                            </tr>
-                            <tr class="border-b border-stone-100">
-                                <td class="p-4 text-stone-400 uppercase font-bold text-xs">Vertical</td>
-                                <td class="p-4 text-right font-bold text-orange-600">75 CM</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 text-stone-400 uppercase font-bold text-xs">Fitness</td>
-                                <td class="p-4 text-right font-black text-green-600 uppercase">Class A</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        <div class="season-avg">
+            <div class="avg-box">
+                <span class="label">PPG</span>
+                <span class="value">14.5</span>
             </div>
-
-            <div class="lg:col-span-2 space-y-10">
-                <section>
-                    <h2 class="text-xl font-black uppercase italic border-l-4 border-orange-500 pl-3 mb-6">Game Log</h2>
-                    <div class="grid grid-cols-3 gap-4">
-                        <div class="bg-white p-4 border border-stone-200 rounded-xl shadow-sm">
-                            <p class="text-[10px] text-stone-400 font-bold uppercase">PPG</p>
-                            <p class="text-2xl font-black italic text-stone-800">18.5</p>
-                        </div>
-                        <div class="bg-white p-4 border border-stone-200 rounded-xl shadow-sm">
-                            <p class="text-[10px] text-stone-400 font-bold uppercase">3P%</p>
-                            <p class="text-2xl font-black italic text-orange-500">42.5</p>
-                        </div>
-                        <div class="bg-white p-4 border border-stone-200 rounded-xl shadow-sm text-center bg-stone-900">
-                            <p class="text-[10px] text-stone-500 font-bold uppercase">Record</p>
-                            <p class="text-2xl font-black italic text-white">12-4</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-black uppercase italic border-l-4 border-orange-500 pl-3 mb-6">Season Gallery</h2>
-                    <div class="flex gap-4">
-                        <div class="group relative w-40 h-52 bg-stone-200 rounded-xl overflow-hidden border-2 border-white shadow-md hover:scale-105 transition-all cursor-pointer">
-                            <img src="game-cover.jpg" alt="Game Album" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-3">
-                                <p class="text-white text-[10px] font-bold uppercase">Summer League</p>
-                                <p class="text-white text-[8px] opacity-70">12 Photos</p>
-                            </div>
-                        </div>
-                        
-                        <div class="w-40 h-52 border-2 border-dashed border-stone-200 rounded-xl flex items-center justify-center text-stone-300 text-xs">
-                            Coming Soon
-                        </div>
-                    </div>
-                </section>
+            <div class="avg-box">
+                <span class="label">RPG</span>
+                <span class="value">5.2</span>
+            </div>
+            <div class="avg-box">
+                <span class="label">APG</span>
+                <span class="value">3.8</span>
             </div>
         </div>
-    </main>
+    </div>
 
-    <footer class="mt-20 py-10 text-center text-stone-300 text-[10px] tracking-[0.2em] uppercase">
-        Adora Performance Lab // Season 2026
-    </footer>
-
-</body>
-</html>
+    <div class="game-log-container">
+        <h2 class="section-title">2025-26 Regular Season Game Log</h2>
+        <table class="nba-table">
+            <thead>
+                <tr>
+                    <th>DATE</th>
+                    <th>OPPONENT</th>
+                    <th>RESULT</th>
+                    <th>PTS</th>
+                    <th>REB</th>
+                    <th>AST</th>
+                    <th>STL</th>
+                    <th>BLK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MAR 21, 2026</td>
+                    <td>@ International School A</td>
+                    <td class="win">W 58-42</td>
+                    <td>18</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>MAR 14, 2026</td>
+                    <td>vs Elite Academy</td>
+                    <td class="loss">L 45-50</td>
+                    <td>12</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
