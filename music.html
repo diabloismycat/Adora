@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Station | Curation & Appreciation</title>
+    <title>Adora's Music Station | Curation & Appreciation</title>
     <style>
         :root {
             --bg-color: #ffffff;
@@ -45,7 +45,6 @@
             padding-bottom: 10px;
         }
 
-        /* --- SECTION LABELS --- */
         .section-label {
             font-size: 13px;
             font-weight: 700;
@@ -75,11 +74,9 @@
             justify-content: center;
             align-items: center;
             border: 10px solid #1a1a1a;
-            /* ROTATION ANIMATION */
             animation: spinVinyl 12s linear infinite;
         }
 
-        /* Vinyl Grooves Effect */
         .vinyl-record::after {
             content: "";
             position: absolute;
@@ -89,7 +86,6 @@
             border: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* EDIT: THIS IS THE CENTER ALBUM ART */
         .vinyl-center-art {
             width: 100px;
             height: 100px;
@@ -115,5 +111,115 @@
         .weekly-recommendation {
             margin-bottom: 100px;
         }
-<img src="Cover1.jpeg" alt="Weekly Pick Cover" class="song-cover">
-        .recommendation-
+
+        .recommendation-card {
+            display: flex;
+            gap: 40px;
+            background: #fff;
+            border: 1px solid var(--border-light);
+            padding: 30px;
+            align-items: center;
+            transition: transform 0.4s ease;
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .song-cover {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .song-details h3 {
+            font-size: 26px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .song-details p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* --- 3. MUSIC APPRECIATION GALLERY --- */
+        .appreciation-gallery {
+            border-top: 1px solid var(--border-light);
+            padding-top: 60px;
+        }
+
+        .review-image {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border: 1px solid var(--border-light);
+        }
+
+        .review-body h4 {
+            font-size: 28px;
+            margin: 20px 0;
+            font-weight: 700;
+        }
+
+        .review-body p {
+            font-size: 17px;
+            color: #444;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        @media (max-width: 768px) {
+            .recommendation-card { flex-direction: column; text-align: center; }
+            .song-cover { width: 100%; height: auto; }
+            .vinyl-record { width: 220px; height: 220px; }
+            .vinyl-center-art { width: 75px; height: 75px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="header-title">Adora's Music Station</h1>
+        </header>
+
+        <section class="vinyl-display">
+            <span class="section-label">Currently On Rotation</span>
+            <div class="vinyl-record">
+                <img src="Cover1.jpeg" alt="Album Label" class="vinyl-center-art">
+            </div>
+            <p class="spinning-caption">Spinning Favorites Only.</p>
+        </section>
+
+        <section class="weekly-recommendation">
+            <span class="section-label">Weekly Recommendation</span>
+            <div class="recommendation-card">
+                <img src="Cover1.jpeg" alt="Weekly Pick Cover" class="song-cover">
+                <div class="song-details">
+                    <h3>[Song Title]</h3>
+                    <p>Artist: [Artist Name]</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="appreciation-gallery">
+            <span class="section-label">Music Appreciation Gallery</span>
+            <div class="review-item">
+                <img src="https://via.placeholder.com/800x500" alt="Feature" class="review-image">
+                <div class="review-body">
+                    <h4>Music Appreciation Title</h4>
+                    <p>Write your thoughts here, Adora!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
