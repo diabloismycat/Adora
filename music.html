@@ -1,82 +1,119 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adora | Music</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Adora's Music Station | Curation & Appreciation</title>
     <style>
-        /* 旋转动画 */
-        @keyframes rotate-record {
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --accent-gold: #c5a059;
+            --vinyl-black: #121212;
+            --border-light: #eeeeee;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .header-title {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--text-main);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* --- SECTION LABELS --- */
+        .section-label {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        /* --- 1. ROTATING VINYL SECTION --- */
+        .vinyl-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .vinyl-record {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, #333 0%, #050505 100%);
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 10px solid #1a1a1a;
+            /* ROTATION ANIMATION */
+            animation: spinVinyl 12s linear infinite;
+        }
+
+        /* Vinyl Grooves Effect */
+        .vinyl-record::after {
+            content: "";
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* EDIT: THIS IS THE CENTER ALBUM ART */
+        .vinyl-center-art {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            z-index: 5;
+        }
+
+        @keyframes spinVinyl {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
 
-        .record-animation {
-            animation: rotate-record 5s linear infinite;
+        .spinning-caption {
+            margin-top: 25px;
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 14px;
         }
 
-        /* 唱片纹理效果 */
-        .record-texture {
-            background: repeating-radial-gradient(
-                circle,
-                #121212,
-                #121212 2px,
-                #1a1a1a 4px,
-                #121212 5px
-            );
+        /* --- 2. WEEKLY RECOMMENDATION --- */
+        .weekly-recommendation {
+            margin-bottom: 100px;
         }
-    </style>
-</head>
-<body class="bg-[#FDFBF7] text-stone-800 font-sans min-h-screen">
 
-    <nav class="p-6 max-w-2xl mx-auto flex justify-between items-center">
-        <a href="index.html" class="text-stone-400 hover:text-stone-800 transition-all">← Back</a>
-        <a href="https://space.bilibili.com/你的B站ID" target="_blank" class="bg-[#fb7299] text-white px-3 py-1 rounded-full text-xs font-bold hover:opacity-80 transition-all">Bilibili ↗</a>
-    </nav>
-
-    <main class="max-w-2xl mx-auto px-6 py-10">
-        
-        <div class="flex flex-col md:flex-row items-center gap-10 mb-16">
-            <div class="relative w-48 h-48 flex-shrink-0">
-                <div class="record-animation record-texture w-full h-full rounded-full border-4 border-stone-900 shadow-2xl flex items-center justify-center relative">
-                    <div class="w-16 h-16 bg-orange-500 rounded-full border-4 border-stone-800 flex items-center justify-center">
-                        <div class="w-2 h-2 bg-[#FDFBF7] rounded-full"></div>
-                    </div>
-                </div>
-                <div class="absolute -top-4 -right-2 w-2 h-20 bg-stone-300 origin-top rotate-[25deg] shadow-sm rounded-full"></div>
-            </div>
-
-            <div class="text-center md:text-left">
-                <h1 class="text-5xl font-black tracking-tighter text-stone-900 uppercase leading-none">Weekly<br>Playlist.</h1>
-                <p class="mt-4 text-stone-400 italic text-sm tracking-widest">Selected by Adora</p>
-            </div>
-        </div>
-        
-        <div class="space-y-3">
-            <div class="flex items-center gap-4 p-4 bg-white border border-stone-100 rounded-2xl shadow-sm hover:translate-x-2 transition-all group cursor-pointer">
-                <div class="w-10 h-10 bg-stone-900 rounded-full flex items-center justify-center text-white text-xs font-black group-hover:bg-orange-500 transition-colors">01</div>
-                <div class="flex-1">
-                    <h3 class="font-bold text-stone-800 italic">Song Title One</h3>
-                    <p class="text-[10px] text-stone-400 uppercase tracking-widest font-bold">Artist Name</p>
-                </div>
-                <div class="text-[10px] font-mono text-stone-300">04:12</div>
-            </div>
-
-            <div class="flex items-center gap-4 p-4 bg-white border border-stone-100 rounded-2xl shadow-sm hover:translate-x-2 transition-all group cursor-pointer">
-                <div class="w-10 h-10 bg-stone-900 rounded-full flex items-center justify-center text-white text-xs font-black group-hover:bg-orange-500 transition-colors">02</div>
-                <div class="flex-1">
-                    <h3 class="font-bold text-stone-800 italic">Song Title Two</h3>
-                    <p class="text-[10px] text-stone-400 uppercase tracking-widest font-bold">Artist Name</p>
-                </div>
-                <div class="text-[10px] font-mono text-stone-300">03:45</div>
-            </div>
-        </div>
-
-        <footer class="mt-20 border-t border-stone-100 pt-10 text-center">
-            <p class="text-stone-300 text-[10px] tracking-[0.3em] uppercase italic">Music is the shorthand of emotion.</p>
-        </footer>
-    </main>
-
-</body>
-</html>
+        .recommendation-
